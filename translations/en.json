@@ -1,0 +1,157 @@
+{
+  "title": "Iryna Savelieva — Python Developer",
+  "name": "Iryna Savelieva",
+  "nav": {
+    "projects": "Projects",
+    "skills": "Skills",
+    "approach": "Approach",
+    "about": "About",
+    "contact": "Get in touch"
+  },
+  "hero": {
+    "badge": "Portfolio",
+    "title_plain": "Code that does",
+    "title_accent": "the work for you.",
+    "text": "I'm Iryna, a Python developer: backend with Flask, automation and data.",
+    "cta_projects": "View projects"
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "From script to web app",
+    "featured": "featured",
+    "all": "All projects",
+    "filter_label": "Filter by area",
+    "code": "Code",
+    "demo": "Demo",
+    "screenshot": "[screenshot]"
+  },
+  "areas": {
+    "all": "All",
+    "web": "Web",
+    "auto": "Automation",
+    "api": "API",
+    "data": "Data",
+    "gui": "Desktop"
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "What I build with",
+    "groups": [
+      {
+        "title": "Python",
+        "items": [
+          "OOP",
+          "error handling",
+          "list comprehension",
+          "JSON",
+          "file handling"
+        ]
+      },
+      {
+        "title": "Web & backend",
+        "items": [
+          "Flask",
+          "Jinja",
+          "Flask-WTF",
+          "SQLite",
+          "SQLAlchemy",
+          "REST API",
+          "authentication",
+          "deployment"
+        ]
+      },
+      {
+        "title": "APIs & integrations",
+        "items": [
+          "HTTP requests",
+          "API keys",
+          "environment variables",
+          "Google Sheets",
+          "SMTP"
+        ]
+      },
+      {
+        "title": "Automation",
+        "items": [
+          "BeautifulSoup",
+          "Selenium",
+          "bots",
+          "trackers"
+        ]
+      },
+      {
+        "title": "Data",
+        "items": [
+          "pandas",
+          "NumPy",
+          "matplotlib",
+          "Plotly",
+          "Seaborn",
+          "linear regression",
+          "t-tests"
+        ]
+      },
+      {
+        "title": "Tools",
+        "items": [
+          "Git",
+          "GitHub",
+          "Tkinter",
+          "debugging"
+        ]
+      }
+    ]
+  },
+  "approach": {
+    "eyebrow": "Approach",
+    "title": "How a project is born",
+    "steps": [
+      {
+        "title": "Plan",
+        "text": "I break the task into steps and define the smallest working version."
+      },
+      {
+        "title": "Build an MVP",
+        "text": "First the simplest version that works from start to finish."
+      },
+      {
+        "title": "Iterate",
+        "text": "I add features one at a time, refactor and check edge cases."
+      },
+      {
+        "title": "Reflect",
+        "text": "After every project I write down what worked and what I'd do differently."
+      }
+    ],
+    "quote_label": "From a post-project reflection",
+    "quote": "[Placeholder: an excerpt from your reflection — what worked, what was hard, what you would do differently.]",
+    "quote_source": "[Project name]"
+  },
+  "about": {
+    "eyebrow": "About me",
+    "photo": "[photo]",
+    "text": "[Placeholder: 3–4 sentences — who you are, what interests you in development, what you're working on.]"
+  },
+  "contact": {
+    "title": "Get in touch.",
+    "text": "About code, ideas or projects — I'm happy to reply.",
+    "email": "[your@email.com]"
+  },
+  "footer": {
+    "copyright": "© 2026 Iryna Savelieva",
+    "top": "Back to top ↑"
+  },
+  "form": {
+    "title": "Send a message",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Message",
+    "send": "Send",
+    "success": "Thank you! Your message was sent.",
+    "failed": "Sorry, the message could not be sent. Please try again later.",
+    "error_name": "Please enter your name.",
+    "error_email": "Please enter a valid email address.",
+    "error_message": "Please write at least 10 characters.",
+    "error_csrf": "The form expired. Please try again."
+  }
+}

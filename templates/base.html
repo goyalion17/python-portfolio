@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ t.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <section id="top" class="hero-section">
+    <div class="blobs" aria-hidden="true"></div>
+
+    <header class="glass navbar">
+      <a href="#top" class="brand"><span class="brand-logo"></span>{{ t.name }}</a>
+      <nav class="nav-links">
+        <a href="#projects">{{ t.nav.projects }}</a>
+        <a href="#skills">{{ t.nav.skills }}</a>
+        <a href="#approach">{{ t.nav.approach }}</a>
+        <a href="#about">{{ t.nav.about }}</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        {% for code in languages %}
+          <a href="{{ url_for('home', lang=code) }}"
+             class="{{ 'on' if code == lang }}"
+             {% if code == lang %}aria-current="true"{% endif %}>{{ code|upper }}</a>
+        {% endfor %}
+      </div>
+      <a class="gbtn" href="#contact">{{ t.nav.contact }}</a>
+    </header>
+
+    {% block hero %}{% endblock %}
+  </section>
+
+  {% block content %}{% endblock %}
+</body>
+</html>

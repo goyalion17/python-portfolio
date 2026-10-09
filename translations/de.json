@@ -1,0 +1,157 @@
+{
+  "title": "Iryna Savelieva — Python-Entwicklerin",
+  "name": "Iryna Savelieva",
+  "nav": {
+    "projects": "Projekte",
+    "skills": "Skills",
+    "approach": "Vorgehen",
+    "about": "Über mich",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "badge": "Portfolio",
+    "title_plain": "Code, der die Arbeit",
+    "title_accent": "für dich erledigt.",
+    "text": "Ich bin Iryna, Python-Entwicklerin: Backend mit Flask, Automatisierung und Daten.",
+    "cta_projects": "Projekte ansehen"
+  },
+  "projects": {
+    "eyebrow": "Projekte",
+    "title": "Vom Skript zur Web-App",
+    "featured": "Highlight",
+    "all": "Alle Projekte",
+    "filter_label": "Nach Bereich filtern",
+    "code": "Code",
+    "demo": "Demo",
+    "screenshot": "[Screenshot]"
+  },
+  "areas": {
+    "all": "Alle",
+    "web": "Web",
+    "auto": "Automatisierung",
+    "api": "API",
+    "data": "Daten",
+    "gui": "Desktop"
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "Womit ich baue",
+    "groups": [
+      {
+        "title": "Python",
+        "items": [
+          "OOP",
+          "Fehlerbehandlung",
+          "List Comprehension",
+          "JSON",
+          "Dateiverarbeitung"
+        ]
+      },
+      {
+        "title": "Web & Backend",
+        "items": [
+          "Flask",
+          "Jinja",
+          "Flask-WTF",
+          "SQLite",
+          "SQLAlchemy",
+          "REST API",
+          "Authentifizierung",
+          "Deployment"
+        ]
+      },
+      {
+        "title": "APIs & Integrationen",
+        "items": [
+          "HTTP-Requests",
+          "API-Schlüssel",
+          "Umgebungsvariablen",
+          "Google Sheets",
+          "SMTP"
+        ]
+      },
+      {
+        "title": "Automatisierung",
+        "items": [
+          "BeautifulSoup",
+          "Selenium",
+          "Bots",
+          "Tracker"
+        ]
+      },
+      {
+        "title": "Daten",
+        "items": [
+          "pandas",
+          "NumPy",
+          "matplotlib",
+          "Plotly",
+          "Seaborn",
+          "lineare Regression",
+          "t-Tests"
+        ]
+      },
+      {
+        "title": "Werkzeuge",
+        "items": [
+          "Git",
+          "GitHub",
+          "Tkinter",
+          "Debugging"
+        ]
+      }
+    ]
+  },
+  "approach": {
+    "eyebrow": "Vorgehen",
+    "title": "Wie ein Projekt entsteht",
+    "steps": [
+      {
+        "title": "Planen",
+        "text": "Ich zerlege die Aufgabe in Schritte und definiere die kleinste lauffähige Version."
+      },
+      {
+        "title": "MVP bauen",
+        "text": "Zuerst die einfachste Version, die von Anfang bis Ende funktioniert."
+      },
+      {
+        "title": "Iterieren",
+        "text": "Ich ergänze Funktionen nacheinander, refaktoriere und prüfe Grenzfälle."
+      },
+      {
+        "title": "Reflektieren",
+        "text": "Nach jedem Projekt halte ich fest, was funktioniert hat und was ich anders machen würde."
+      }
+    ],
+    "quote_label": "Aus einer Projekt-Reflexion",
+    "quote": "[Platzhalter: ein Auszug aus deiner Reflexion — was gelang, was schwierig war, was du anders machen würdest.]",
+    "quote_source": "[Projektname]"
+  },
+  "about": {
+    "eyebrow": "Über mich",
+    "photo": "[Foto]",
+    "text": "[Platzhalter: 3–4 Sätze — wer du bist, was dich an der Entwicklung interessiert, woran du arbeitest.]"
+  },
+  "contact": {
+    "title": "Schreib mir.",
+    "text": "Über Code, Ideen oder Projekte — ich antworte gern.",
+    "email": "[your@email.com]"
+  },
+  "footer": {
+    "copyright": "© 2026 Iryna Savelieva",
+    "top": "Nach oben ↑"
+  },
+  "form": {
+    "title": "Nachricht senden",
+    "name": "Dein Name",
+    "email": "Deine E-Mail",
+    "message": "Nachricht",
+    "send": "Senden",
+    "success": "Danke! Deine Nachricht wurde gesendet.",
+    "failed": "Leider konnte die Nachricht nicht gesendet werden. Bitte versuche es später erneut.",
+    "error_name": "Bitte gib deinen Namen ein.",
+    "error_email": "Bitte gib eine gültige E-Mail-Adresse ein.",
+    "error_message": "Bitte schreibe mindestens 10 Zeichen.",
+    "error_csrf": "Das Formular ist abgelaufen. Bitte versuche es erneut."
+  }
+}

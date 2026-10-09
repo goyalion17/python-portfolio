@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block hero %}
+<div class="hero">
+  <div class="hero-text">
+    <span class="glass badge"><span class="badge-pill">{{ t.hero.badge }}</span>{{ t.name }}</span>
+    <h1>{{ t.hero.title_plain }} <span class="gtext">{{ t.hero.title_accent }}</span></h1>
+    <p class="lead">{{ t.hero.text }}</p>
+    <div class="hero-actions">
+      <a class="gbtn big" href="#projects">{{ t.hero.cta_projects }} →</a>
+      <a class="glass big ghost" href="#">GitHub</a>
+    </div>
+  </div>
+
+  <div class="code-card">
+    <div class="code-head"><span>flight_deals.py</span><span><i class="dot"></i>scheduled · 08:00</span></div>
+<pre><span class="kw">for</span> city <span class="kw">in</span> sheet.destinations():
+    deal = search.cheapest(<span class="arg">origin</span>, city)
+    <span class="kw">if</span> deal.price &lt; city.max_price:
+        notify(<span class="str">f"{city.name}: {deal.price} €"</span>)</pre>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<section id="projects" class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow gtext">{{ t.projects.eyebrow }}</span>
+      <h2>{{ t.projects.title }}</h2>
+    </div>
+
+    <div class="featured-grid">
+      {% for p in featured %}
+      <article class="glass lift card-big">
+        <div class="shot {{ p.area }}">{{ t.projects.screenshot }}</div>
+        <div class="card-body">
+          <span class="meta">{{ t.areas[p.area] }} · {{ t.projects.featured }}</span>
+          <h3>{{ p.name }}</h3>
+          <p>{{ p.description(lang) }}</p>
+          <div class="tags">
+            {% for tag in p.tag_list() %}<span class="tag">{{ tag }}</span>{% endfor %}
+          </div>
+          <div class="card-actions">
+            <a class="btn-outline" href="{{ p.code_url or '#' }}">{{ t.projects.code }}</a>
+            <a class="gbtn center" href="{{ p.demo_url or '#' }}">{{ t.projects.demo }}</a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="all-projects">
+      <div class="all-head">
+        <h3>{{ t.projects.all }}</h3>
+        <div class="seg-group" role="group" aria-label="{{ t.projects.filter_label }}">
+          {% for a in areas %}
+            <a class="seg {{ 'on' if a == current_area }}"
+               href="{{ url_for('home', lang=lang, area=a if a != 'all' else None) }}#projects"
+               {% if a == current_area %}aria-current="true"{% endif %}>
+              {{ t.areas[a] }} <span class="count">{{ counts.get(a, 0) }}</span>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="small-grid">
+        {% for p in projects %}
+        <article class="lift card-small">
+          <div class="shot small {{ p.area }}">{{ t.projects.screenshot }}</div>
+          <span class="meta">{{ t.areas[p.area] }}</span>
+          <h4>{{ p.name }}</h4>
+          <p>{{ p.description(lang) }}</p>
+          <div class="tags small">
+            {% for tag in p.tag_list() %}<span class="tag">{{ tag }}</span>{% endfor %}
+          </div>
+          <div class="links">
+            <a href="{{ p.code_url or '#' }}">{{ t.projects.code }} ↗</a>
+            <a href="{{ p.demo_url or '#' }}">{{ t.projects.demo }} ↗</a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow gtext">{{ t.skills.eyebrow }}</span>
+      <h2>{{ t.skills.title }}</h2>
+    </div>
+    <div class="skills-grid">
+      {% for group in t.skills.groups %}
+      <div class="glass skill-card">
+        <h3>{{ group.title }}</h3>
+        <div class="tags">
+          {% for item in group["items"] %}<span class="tag outlined">{{ item }}</span>{% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="approach" class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow gtext">{{ t.approach.eyebrow }}</span>
+      <h2>{{ t.approach.title }}</h2>
+    </div>
+    <ol class="steps">
+      {% for step in t.approach.steps %}
+      <li class="glass skill-card">
+        <span class="step-n gtext">step_{{ loop.index }}()</span>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.text }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+    <figure class="glass quote">
+      <span class="meta">{{ t.approach.quote_label }}</span>
+      <blockquote>{{ t.approach.quote }}</blockquote>
+      <figcaption>{{ t.approach.quote_source }}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="glass about-card">
+    <div class="avatar">{{ t.about.photo }}</div>
+    <div class="about-text">
+      <span class="eyebrow gtext">{{ t.about.eyebrow }}</span>
+      <p>{{ t.about.text }}</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" class="footer">
+  <div class="cta">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <h2>{{ t.contact.title }}</h2>
+    <p>{{ t.contact.text }}</p>
+    <div class="cta-links">
+      <a class="cta-main" href="#">{{ t.contact.email }}</a>
+      <a class="cta-side" href="#">LinkedIn</a>
+      <a class="cta-side" href="#">GitHub</a>
+    </div>
+
+    <form class="contact-form" method="post" action="{{ url_for('home', lang=lang, _anchor='contact') }}" novalidate>
+      {{ form.hidden_tag() }}
+      <h3>{{ t.form.title }}</h3>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, text in messages %}
+          <p class="flash {{ category }}" role="status">{{ text }}</p>
+        {% endfor %}
+      {% endwith %}
+      {% if form.csrf_token.errors %}<p class="flash error" role="alert">{{ t.form.error_csrf }}</p>{% endif %}
+
+      <div class="form-row">
+        <div class="field">
+          <label for="name">{{ t.form.name }}</label>
+          {{ form.name(id="name", autocomplete="name", maxlength=80) }}
+          {% if form.name.errors %}<span class="field-error" role="alert">{{ t.form.error_name }}</span>{% endif %}
+        </div>
+        <div class="field">
+          <label for="email">{{ t.form.email }}</label>
+          {{ form.email(id="email", type="email", autocomplete="email", maxlength=120) }}
+          {% if form.email.errors %}<span class="field-error" role="alert">{{ t.form.error_email }}</span>{% endif %}
+        </div>
+      </div>
+      <div class="field">
+        <label for="message">{{ t.form.message }}</label>
+        {{ form.message(id="message", rows=5, maxlength=2000) }}
+        {% if form.message.errors %}<span class="field-error" role="alert">{{ t.form.error_message }}</span>{% endif %}
+      </div>
+      <div class="hp" aria-hidden="true">{{ form.website(tabindex="-1", autocomplete="off") }}</div>
+      <button class="gbtn big" type="submit">{{ t.form.send }}</button>
+    </form>
+  </div>
+  <div class="footer-bottom">
+    <span>{{ t.footer.copyright }}</span>
+    <a href="#top">{{ t.footer.top }}</a>
+  </div>
+</footer>
+{% endblock %}
