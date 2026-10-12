@@ -43,8 +43,8 @@
             {% for tag in p.tag_list() %}<span class="tag">{{ tag }}</span>{% endfor %}
           </div>
           <div class="card-actions">
-            <a class="btn-outline" href="{{ p.code_url or '#' }}">{{ t.projects.code }}</a>
-            <a class="gbtn center" href="{{ p.demo_url or '#' }}">{{ t.projects.demo }}</a>
+            {% if p.code_url %}<a class="btn-outline" href="{{ p.code_url }}" target="_blank" rel="noopener">{{ t.projects.code }}</a>{% endif %}
+            {% if p.demo_url %}<a class="gbtn center" href="{{ p.demo_url }}" target="_blank" rel="noopener">{{ t.projects.demo }}</a>{% endif %}
           </div>
         </div>
       </article>
@@ -77,8 +77,8 @@
             {% for tag in p.tag_list() %}<span class="tag">{{ tag }}</span>{% endfor %}
           </div>
           <div class="links">
-            <a href="{{ p.code_url or '#' }}">{{ t.projects.code }} ↗</a>
-            <a href="{{ p.demo_url or '#' }}">{{ t.projects.demo }} ↗</a>
+            {% if p.code_url %}<a href="{{ p.code_url }}" target="_blank" rel="noopener">{{ t.projects.code }} ↗</a>{% endif %}
+            {% if p.demo_url %}<a href="{{ p.demo_url }}" target="_blank" rel="noopener">{{ t.projects.demo }} ↗</a>{% endif %}
           </div>
         </article>
         {% endfor %}
