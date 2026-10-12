@@ -33,6 +33,13 @@ PROJECTS = [
         "desc_de": "Sammelt Mietanzeigen und trägt sie automatisch in ein Google-Formular ein.",
     },
     {
+        "area": "auto", "name": "Tic Tac Toe", "tags": "Python,CLI,random",
+        "desc_en": "A text-based Tic Tac Toe for two players or against a computer that plays random moves.",
+        "desc_uk": "Текстова гра «хрестики-нулики» для двох гравців або проти комп’ютера з випадковими ходами.",
+        "desc_de": "Textbasiertes Tic-Tac-Toe für zwei Spieler oder gegen einen Computer mit zufälligen Zügen.",
+        "code_url": "https://github.com/goyalion17/tic-tac-toe",
+    },
+    {
         "area": "api", "name": "Flight Deal Finder", "tags": "REST API,Google Sheets,SMTP", "featured": True,
         "desc_en": "Searches for cheap flights across a list of destinations and alerts you to deals.",
         "desc_uk": "Шукає дешеві авіаквитки за списком напрямків і сповіщає про знахідки.",
