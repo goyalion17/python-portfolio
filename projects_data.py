@@ -38,6 +38,7 @@ PROJECTS = [
         "desc_uk": "Текстова гра «хрестики-нулики» для двох гравців або проти комп’ютера з випадковими ходами.",
         "desc_de": "Textbasiertes Tic-Tac-Toe für zwei Spieler oder gegen einen Computer mit zufälligen Zügen.",
         "code_url": "https://github.com/goyalion17/tic-tac-toe",
+        "image": "tic-tac-toe.png",
     },
     {
         "area": "api", "name": "Flight Deal Finder", "tags": "REST API,Google Sheets,SMTP", "featured": True,

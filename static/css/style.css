@@ -360,3 +360,7 @@ h2 {
 @media (prefers-color-scheme: dark) {
   .field-error, .flash.error { color: #FF8FA6; }
 }
+
+/* real project screenshots */
+.shot-img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.shot-img.small { aspect-ratio: 16 / 9; border-radius: 12px; }

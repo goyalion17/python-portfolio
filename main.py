@@ -37,6 +37,7 @@ class Project(db.Model):
     desc_de = db.Column(db.String(300), nullable=False)
     code_url = db.Column(db.String(300))
     demo_url = db.Column(db.String(300))
+    image = db.Column(db.String(200))  # file name inside static/img/
 
     def description(self, lang):
         return getattr(self, f"desc_{lang}")
