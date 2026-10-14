@@ -94,4 +94,12 @@ PROJECTS = [
         "desc_uk": "Картки для вивчення слів, що запам’ятовують прогрес.",
         "desc_de": "Lernkarten für Vokabeln, die den Fortschritt speichern.",
     },
+    {
+        "area": "gui", "name": "Watermark Studio", "tags": "Tkinter,Pillow",
+        "desc_en": "A desktop app that adds a text or logo watermark to photos, with live preview, tiling and batch processing.",
+        "desc_uk": "Десктопний застосунок, що додає текстовий або логотипний водяний знак на фото: з превʼю наживо, плиткою й пакетною обробкою.",
+        "desc_de": "Eine Desktop-App, die Fotos ein Text- oder Logo-Wasserzeichen hinzufügt: mit Live-Vorschau, Kachelmuster und Stapelverarbeitung.",
+        "code_url": "https://github.com/goyalion17/watermark-studio",
+        "image": "watermark-studio.png",
+    },
 ]
