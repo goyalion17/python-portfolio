@@ -102,4 +102,12 @@ PROJECTS = [
         "code_url": "https://github.com/goyalion17/watermark-studio",
         "image": "watermark-studio.png",
     },
+    {
+        "area": "gui", "name": "Typing Speed Test", "tags": "Tkinter,Wikipedia API,threading",
+        "desc_en": "A typing speed test with live feedback, English and Ukrainian texts, random Wikipedia articles and saved high scores.",
+        "desc_uk": "Тест швидкості друку з підсвічуванням наживо, англійськими й українськими текстами, випадковими статтями Вікіпедії та збереженими рекордами.",
+        "desc_de": "Ein Tipptempo-Test mit Live-Feedback, englischen und ukrainischen Texten, zufälligen Wikipedia-Artikeln und gespeicherten Bestwerten.",
+        "code_url": "https://github.com/goyalion17/typing-speed-test",
+        "image": "typing-speed-test.png",
+    },
 ]
