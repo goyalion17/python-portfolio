@@ -110,4 +110,12 @@ PROJECTS = [
         "code_url": "https://github.com/goyalion17/typing-speed-test",
         "image": "typing-speed-test.png",
     },
+    {
+        "area": "gui", "name": "Breakout", "tags": "turtle,OOP,game loop",
+        "desc_en": "A classic Breakout arcade game with bouncing angles, 3 levels, lives, a saved high score and sound effects.",
+        "desc_uk": "Класична аркадна гра Breakout з кутами відскоку, 3 рівнями, життями, збереженим рекордом і звуками.",
+        "desc_de": "Das klassische Breakout-Arcade-Spiel mit Abprallwinkeln, 3 Levels, Leben, gespeichertem Bestwert und Soundeffekten.",
+        "code_url": "https://github.com/goyalion17/breakout-game",
+        "image": "breakout.png",
+    },
 ]
