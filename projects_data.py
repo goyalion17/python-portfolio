@@ -19,6 +19,8 @@ PROJECTS = [
         "desc_en": "A directory of cafés for working: coffee, Wi-Fi, power sockets.",
         "desc_uk": "Каталог кав’ярень для роботи: кава, Wi‑Fi, розетки.",
         "desc_de": "Verzeichnis von Cafés zum Arbeiten: Kaffee, WLAN, Steckdosen.",
+        "code_url": "https://github.com/goyalion17/cafe-and-wifi",
+        "image": "cafe-website.png",
     },
     {
         "area": "auto", "name": "Amazon Price Tracker", "tags": "BeautifulSoup,requests,SMTP", "featured": True,
