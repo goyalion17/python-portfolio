@@ -23,6 +23,14 @@ PROJECTS = [
         "image": "cafe-website.png",
     },
     {
+        "area": "web", "name": "Taskflow", "tags": "Flask,SQLite,JavaScript",
+        "desc_en": "A Trello-style task board: drag and drop cards, due dates, labels, custom backgrounds, guest mode and an English/Ukrainian interface.",
+        "desc_uk": "Дошка завдань у стилі Trello: перетягування карток, терміни, мітки, власний фон, гостьовий режим та інтерфейс англійською й українською.",
+        "desc_de": "Ein Aufgabenboard im Trello-Stil: Karten per Drag & Drop, Fälligkeitsdaten, Labels, eigener Hintergrund, Gastmodus und eine englisch-ukrainische Oberfläche.",
+        "code_url": "https://github.com/goyalion17/taskflow",
+        "image": "taskflow.png",
+    },
+    {
         "area": "auto", "name": "Amazon Price Tracker", "tags": "BeautifulSoup,requests,SMTP", "featured": True,
         "desc_en": "Watches a product price and sends an email when it drops below a threshold.",
         "desc_uk": "Стежить за ціною товару й надсилає лист, коли вона падає нижче порогу.",
