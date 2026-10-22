@@ -128,4 +128,12 @@ PROJECTS = [
         "code_url": "https://github.com/goyalion17/breakout-game",
         "image": "breakout.png",
     },
+    {
+        "area": "gui", "name": "Dangerous Writing App", "tags": "CustomTkinter,Tkinter,timers",
+        "desc_en": "A writing app against writer's block: stop typing for a few seconds and your text fades away and is deleted. Light and dark theme, time or word goals.",
+        "desc_uk": "Застосунок для письма проти творчого ступору: зупинишся на кілька секунд, і текст згасне та зникне. Світла й темна тема, цілі за часом або словами.",
+        "desc_de": "Eine Schreib-App gegen Schreibblockaden: Wer ein paar Sekunden aufhört zu tippen, sieht den Text verblassen und verschwinden. Helles und dunkles Design, Zeit- oder Wortziele.",
+        "code_url": "https://github.com/goyalion17/dangerous-writing-app",
+        "image": "dangerous-writing-app.png",
+    },
 ]
