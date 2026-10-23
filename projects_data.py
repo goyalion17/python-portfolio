@@ -136,4 +136,12 @@ PROJECTS = [
         "code_url": "https://github.com/goyalion17/dangerous-writing-app",
         "image": "dangerous-writing-app.png",
     },
+    {
+        "area": "gui", "name": "PDF to Audiobook", "tags": "CustomTkinter,edge-tts,OCR,asyncio",
+        "desc_en": "Turns any PDF, even a scanned book, into an MP3 audiobook with free natural-sounding voices. Listen in the app, save the MP3, and continue where you stopped.",
+        "desc_uk": "Перетворює будь-який PDF, навіть сканований, на аудіокнигу MP3 з безкоштовними природними голосами. Слухай у застосунку, зберігай MP3 і продовжуй слухати з того самого місця.",
+        "desc_de": "Macht aus jedem PDF, auch aus gescannten Büchern, ein MP3-Hörbuch mit kostenlosen, natürlich klingenden Stimmen. In der App anhören, als MP3 speichern und dort weiterhören, wo man aufgehört hat.",
+        "code_url": "https://github.com/goyalion17/pdf-to-audiobook",
+        "image": "pdf-to-audiobook.png",
+    },
 ]
