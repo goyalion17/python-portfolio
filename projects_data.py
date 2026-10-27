@@ -31,6 +31,14 @@ PROJECTS = [
         "image": "taskflow.png",
     },
     {
+        "area": "web", "name": "Palette Extractor", "tags": "Flask,NumPy,Pillow,JavaScript",
+        "desc_en": "Finds the most common colours in a photo with NumPy. Live palette updates, highlight of each colour on the image, a colour picker, CSS/JSON/PNG export and readable WCAG colour pairs.",
+        "desc_uk": "Знаходить найпоширеніші кольори на фото за допомогою NumPy. Палітра оновлюється наживо, кожен колір підсвічується на зображенні, є піпетка, експорт у CSS/JSON/PNG і контрастні пари кольорів за WCAG.",
+        "desc_de": "Findet mit NumPy die häufigsten Farben eines Fotos. Live-Aktualisierung der Palette, Hervorhebung jeder Farbe im Bild, Pipette, Export als CSS/JSON/PNG und gut lesbare Farbpaare nach WCAG.",
+        "code_url": "https://github.com/goyalion17/palette-extractor",
+        "image": "palette-extractor.png",
+    },
+    {
         "area": "auto", "name": "Amazon Price Tracker", "tags": "BeautifulSoup,requests,SMTP", "featured": True,
         "desc_en": "Watches a product price and sends an email when it drops below a threshold.",
         "desc_uk": "Стежить за ціною товару й надсилає лист, коли вона падає нижче порогу.",
