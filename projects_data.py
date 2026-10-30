@@ -101,6 +101,14 @@ PROJECTS = [
         "desc_de": "Hängen Suchtrends mit realen Daten zusammen? Korrelationen und Diagramme.",
     },
     {
+        "area": "data", "name": "Steam Top Sellers Scraper", "tags": "BeautifulSoup,requests,CSV",
+        "desc_en": "Scrapes Steam's Top Sellers chart into a CSV: about 300 games with prices, discounts, reviews and platforms, ready for a spreadsheet or pandas.",
+        "desc_uk": "Збирає чарт Top Sellers зі Steam у CSV: близько 300 ігор із цінами, знижками, відгуками й платформами, готових для таблиці чи pandas.",
+        "desc_de": "Liest die Top-Seller-Charts von Steam in eine CSV-Datei aus: rund 300 Spiele mit Preisen, Rabatten, Bewertungen und Plattformen, bereit für eine Tabelle oder pandas.",
+        "code_url": "https://github.com/goyalion17/steam-top-sellers-scraper",
+        "image": "steam-top-sellers.png",
+    },
+    {
         "area": "gui", "name": "Password Manager", "tags": "Tkinter,JSON",
         "desc_en": "Generates and stores passwords, and looks up saved entries.",
         "desc_uk": "Генерує й зберігає паролі, шукає збережені записи.",
