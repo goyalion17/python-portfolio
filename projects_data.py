@@ -51,6 +51,14 @@ PROJECTS = [
         "desc_de": "Sammelt Mietanzeigen und trägt sie automatisch in ein Google-Formular ein.",
     },
     {
+        "area": "auto", "name": "T-Rex Bot", "tags": "mss,Pillow,PyAutoGUI",
+        "desc_en": "A bot that plays Chrome's dinosaur game by looking at the screen: it measures the speed of the game, times each jump and follows the game when the page zooms it.",
+        "desc_uk": "Бот, який грає в динозаврика з Chrome, дивлячись на екран: вимірює швидкість гри, розраховує кожен стрибок і стежить за грою, коли сторінка її збільшує.",
+        "desc_de": "Ein Bot, der das Dino-Spiel von Chrome spielt, indem er auf den Bildschirm schaut: Er misst das Tempo, timt jeden Sprung und folgt dem Spiel, wenn die Seite es vergrößert.",
+        "code_url": "https://github.com/goyalion17/t-rex-bot",
+        "image": "t-rex-bot.png",
+    },
+    {
         "area": "auto", "name": "Tic Tac Toe", "tags": "Python,CLI,random",
         "desc_en": "A text-based Tic Tac Toe for two players or against a computer that plays random moves.",
         "desc_uk": "Текстова гра «хрестики-нулики» для двох гравців або проти комп’ютера з випадковими ходами.",
