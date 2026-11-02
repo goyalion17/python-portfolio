@@ -168,4 +168,12 @@ PROJECTS = [
         "code_url": "https://github.com/goyalion17/pdf-to-audiobook",
         "image": "pdf-to-audiobook.png",
     },
+    {
+        "area": "gui", "name": "Alien Siege", "tags": "turtle,OOP,game loop,pytest",
+        "desc_en": "A shoot 'em up in turtle: a fleet of aliens marches down and speeds up as it shrinks, shoots back and crushes bunkers that crumble block by block. Waves, lives and a saved high score.",
+        "desc_uk": "Шутер на turtle: флот прибульців марширує вниз і пришвидшується, коли їх меншає, стріляє у відповідь і трощить бункери, що кришаться по блоку. Хвилі, життя і збережений рекорд.",
+        "desc_de": "Ein Shoot 'em up mit turtle: Eine Alien-Flotte marschiert nach unten, wird schneller, je kleiner sie wird, schießt zurück und zerstört Bunker, die Block für Block zerbröckeln. Wellen, Leben und gespeicherter Bestwert.",
+        "code_url": "https://github.com/goyalion17/alien-siege",
+        "image": "alien-siege.png",
+    },
 ]
