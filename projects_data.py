@@ -176,4 +176,12 @@ PROJECTS = [
         "code_url": "https://github.com/goyalion17/alien-siege",
         "image": "alien-siege.png",
     },
+    {
+        "area": "api", "name": "Art Explorer", "tags": "Flask,requests,REST API,pytest",
+        "desc_en": "Explore 130,000 works of the Art Institute of Chicago through its public API: search, museum highlights, a random artwork, detailed artwork pages and favourites. An image proxy adds the header the museum's image server requires.",
+        "desc_uk": "Колекція Чиказького інституту мистецтв із 130 000 творів через публічний API: пошук, добірка музею, випадкова картина, сторінки творів і обране. Проксі для зображень додає заголовок, якого вимагає сервер картинок музею.",
+        "desc_de": "130.000 Werke des Art Institute of Chicago über die öffentliche API entdecken: Suche, Highlights des Museums, ein zufälliges Kunstwerk, Detailseiten und Favoriten. Ein Bild-Proxy ergänzt den Header, den der Bildserver des Museums verlangt.",
+        "code_url": "https://github.com/goyalion17/art-explorer",
+        "image": "art-explorer.png",
+    },
 ]
