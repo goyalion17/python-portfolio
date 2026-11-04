@@ -184,4 +184,12 @@ PROJECTS = [
         "code_url": "https://github.com/goyalion17/art-explorer",
         "image": "art-explorer.png",
     },
+    {
+        "area": "web", "name": "Polytsia Books", "tags": "Flask,SQLAlchemy,Flask-Login,Stripe,pytest",
+        "desc_en": "An online bookshop with a cart, accounts and real Stripe Checkout payments in test mode. Search and categories, stock checks, order history, a webhook that confirms orders safely and an English/Ukrainian interface.",
+        "desc_uk": "Онлайн-книгарня з кошиком, акаунтами й оплатою через Stripe Checkout у тестовому режимі. Пошук і категорії, перевірка залишків, історія замовлень, webhook для надійного підтвердження оплати та інтерфейс англійською й українською.",
+        "desc_de": "Ein Online-Buchladen mit Warenkorb, Konten und Zahlungen über Stripe Checkout im Testmodus. Suche und Kategorien, Lagerprüfung, Bestellhistorie, ein Webhook zur sicheren Bestätigung und eine englisch-ukrainische Oberfläche.",
+        "code_url": "https://github.com/goyalion17/polytsia-books",
+        "image": "polytsia-books.png",
+    },
 ]
