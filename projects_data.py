@@ -117,6 +117,14 @@ PROJECTS = [
         "image": "steam-top-sellers.png",
     },
     {
+        "area": "data", "name": "Fatal Force", "tags": "pandas,Plotly,Seaborn,Jupyter",
+        "desc_en": "An analysis of 2,500+ US police killings (2015–2017) combined with census data on poverty, education and race. It compares each group's share of killings with its share of the population, and covers age, weapons and trends over time.",
+        "desc_uk": "Аналіз понад 2 500 убивств поліцією в США (2015–2017) разом із даними перепису про бідність, освіту й расу. Порівнює частку кожної групи серед загиблих з її часткою в населенні, а також вік, зброю й динаміку в часі.",
+        "desc_de": "Eine Analyse von über 2.500 Tötungen durch die Polizei in den USA (2015–2017), kombiniert mit Zensusdaten zu Armut, Bildung und Herkunft. Sie vergleicht den Anteil jeder Gruppe an den Getöteten mit ihrem Bevölkerungsanteil und betrachtet Alter, Waffen und den zeitlichen Verlauf.",
+        "code_url": "https://github.com/goyalion17/fatal-force",
+        "image": "fatal-force.png",
+    },
+    {
         "area": "gui", "name": "Password Manager", "tags": "Tkinter,JSON",
         "desc_en": "Generates and stores passwords, and looks up saved entries.",
         "desc_uk": "Генерує й зберігає паролі, шукає збережені записи.",
