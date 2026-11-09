@@ -57,7 +57,7 @@
         <h3>{{ t.projects.all }}</h3>
         <div class="seg-group" role="group" aria-label="{{ t.projects.filter_label }}">
           {% for a in areas %}
-            <a class="seg {{ 'on' if a == current_area }}"
+            <a class="seg {{ 'on' if a == current_area }}" data-area="{{ a }}"
                href="{{ url_for('home', lang=lang, area=a if a != 'all' else None) }}#projects"
                {% if a == current_area %}aria-current="true"{% endif %}>
               {{ t.areas[a] }} <span class="count">{{ counts.get(a, 0) }}</span>
@@ -68,7 +68,7 @@
 
       <div class="small-grid">
         {% for p in projects %}
-        <article class="lift card-small">
+        <article class="lift card-small" data-area="{{ p.area }}"{% if current_area != 'all' and p.area != current_area %} hidden{% endif %}>
           {% if p.image %}<img class="shot-img small" src="{{ url_for('static', filename='img/' ~ p.image) }}" alt="{{ p.name }}">
           {% else %}<div class="shot small {{ p.area }}">{{ p.name }}</div>{% endif %}
           <span class="meta">{{ t.areas[p.area] }}</span>
@@ -151,6 +151,7 @@
       <a class="cta-side" href="https://github.com/goyalion17" target="_blank" rel="noopener">GitHub</a>
     </div>
 
+    {% if not config.STATIC_BUILD %}
     <form class="contact-form" method="post" action="{{ url_for('home', lang=lang, _anchor='contact') }}" novalidate>
       {{ form.hidden_tag() }}
       <h3>{{ t.form.title }}</h3>
@@ -182,10 +183,38 @@
       <div class="hp" aria-hidden="true">{{ form.website(tabindex="-1", autocomplete="off") }}</div>
       <button class="gbtn big" type="submit">{{ t.form.send }}</button>
     </form>
+    {% endif %}
   </div>
   <div class="footer-bottom">
     <span>{{ t.footer.copyright }}</span>
     <a href="#top">{{ t.footer.top }}</a>
   </div>
 </footer>
+
+<script>
+  // Area filter without a page reload; also reads ?area= so the static copy can be linked to a filter
+  (() => {
+    const segs = document.querySelectorAll(".seg[data-area]");
+    const cards = document.querySelectorAll(".card-small[data-area]");
+    function show(area, updateUrl) {
+      segs.forEach((seg) => {
+        const on = seg.dataset.area === area;
+        seg.classList.toggle("on", on);
+        if (on) seg.setAttribute("aria-current", "true"); else seg.removeAttribute("aria-current");
+      });
+      cards.forEach((card) => { card.hidden = area !== "all" && card.dataset.area !== area; });
+      if (updateUrl) {
+        const url = new URL(location.href);
+        if (area === "all") url.searchParams.delete("area"); else url.searchParams.set("area", area);
+        history.replaceState(null, "", url);
+      }
+    }
+    segs.forEach((seg) => seg.addEventListener("click", (event) => {
+      event.preventDefault();
+      show(seg.dataset.area, true);
+    }));
+    const initial = new URLSearchParams(location.search).get("area");
+    if (initial && [...segs].some((seg) => seg.dataset.area === initial)) show(initial, false);
+  })();
+</script>
 {% endblock %}

@@ -23,6 +23,7 @@ app = Flask(__name__)
 # In production SECRET_KEY must be set in the environment
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev-only-change-me")
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///portfolio.db"
+app.config["STATIC_BUILD"] = False  # freeze.py sets True: no contact form on the static site
 db = SQLAlchemy(app)
 
 
@@ -101,10 +102,9 @@ def home(lang):
     if area != "all" and area not in AREAS:
         area = "all"
 
-    query = db.select(Project).order_by(Project.id)
-    if area != "all":
-        query = query.where(Project.area == area)
-    projects = db.session.execute(query).scalars().all()
+    # All projects are rendered; the area filter hides cards (server-side for the first view, JS after that),
+    # so the same page also works as a static copy on GitHub Pages
+    projects = db.session.execute(db.select(Project).order_by(Project.id)).scalars().all()
 
     featured = db.session.execute(
         db.select(Project).where(Project.featured).order_by(Project.id)

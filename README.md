@@ -70,6 +70,21 @@ and open http://127.0.0.1:5001
 
 Without SMTP settings, the contact form prints messages to the terminal in debug mode.
 
+## GitHub Pages
+
+The live site is a static copy built with [Frozen-Flask](https://frozen-flask.readthedocs.io/):
+
+```bash
+python freeze.py      # writes the pages for /en/, /uk/, /de/ to build/
+```
+
+- The root page picks the language from the browser settings.
+- The area filter runs in the browser, so it works without a server (`?area=web` links work too).
+- The contact form needs a server, so the static copy shows only the email and GitHub links.
+
+[.github/workflows/pages.yml](.github/workflows/pages.yml) builds and deploys the site on every push to `main`
+(Settings → Pages → Source: GitHub Actions).
+
 ## Adding a project
 
 Add an entry to [projects_data.py](projects_data.py) (name, area, tags, descriptions in all three languages, optional `code_url` and `demo_url`). For a project whose code is not public, set `"private": True` instead of `code_url`: the card then shows "Private code, available on request".

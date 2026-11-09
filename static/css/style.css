@@ -263,6 +263,7 @@ h2 {
   display: flex; flex-direction: column; gap: 10px; padding: 18px;
   border-radius: 18px; background: var(--bg); border: 1px solid var(--line);
 }
+.card-small[hidden] { display: none; }
 .card-small .meta { font-size: 12px; }
 .card-small h4 { margin: 0; font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
 .card-small p { margin: 0; font-size: 14.5px; line-height: 1.5; color: var(--muted); flex-grow: 1; }
