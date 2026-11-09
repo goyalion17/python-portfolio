@@ -51,6 +51,14 @@ python main.py
 
 Open http://127.0.0.1:5000
 
+On macOS port 5000 is often taken by the AirPlay Receiver. Run the app on another port instead:
+
+```bash
+flask --app main run --debug --port 5001
+```
+
+and open http://127.0.0.1:5001
+
 ### Environment variables
 
 | Variable | Purpose |
@@ -64,10 +72,10 @@ Without SMTP settings, the contact form prints messages to the terminal in debug
 
 ## Adding a project
 
-Add an entry to [projects_data.py](projects_data.py) (name, area, tags, descriptions in all three languages, optional `code_url` and `demo_url`).
+Add an entry to [projects_data.py](projects_data.py) (name, area, tags, descriptions in all three languages, optional `code_url` and `demo_url`). For a project whose code is not public, set `"private": True` instead of `code_url`: the card then shows "Private code, available on request".
 If the database already exists, delete `instance/portfolio.db` and restart the app so it is seeded again.
 
 ## Notes
 
 - Translations are loaded at startup, so restart the server after editing the JSON files.
-- Screenshots, personal texts and links are still placeholders in square brackets.
+- Projects without a screenshot show a gradient block with the project name.

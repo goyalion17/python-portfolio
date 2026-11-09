@@ -1,18 +1,14 @@
 # Starting data for the projects table. Areas: web, auto, api, data, gui.
-# Real links and new projects (Day 82-100) get added here or directly in the DB.
+# Only projects with public code (code_url) or private ones with a screenshot (private=True).
 
 PROJECTS = [
     {
-        "area": "web", "name": "Blog", "tags": "Flask,SQLAlchemy,Bootstrap", "featured": True,
+        "area": "web", "name": "Blog", "tags": "Flask,SQLAlchemy,Flask-Login,Bootstrap",
         "desc_en": "A blog with user registration, comments and post management.",
         "desc_uk": "Блог із реєстрацією, коментарями й керуванням постами.",
         "desc_de": "Ein Blog mit Registrierung, Kommentaren und Beitragsverwaltung.",
-    },
-    {
-        "area": "web", "name": "Top 10 Movies", "tags": "Flask,SQLite,Flask-WTF",
-        "desc_en": "A personal movie ranking: add films via an API, edit ratings.",
-        "desc_uk": "Особистий рейтинг фільмів: додавання через API, редагування оцінок.",
-        "desc_de": "Persönliches Film-Ranking: Filme über eine API hinzufügen, Bewertungen bearbeiten.",
+        "code_url": "https://github.com/goyalion17/flask-blog-with-users",
+        "image": "blog.png",
     },
     {
         "area": "web", "name": "Coffee & Wifi", "tags": "Flask,Jinja,Bootstrap",
@@ -39,18 +35,6 @@ PROJECTS = [
         "image": "palette-extractor.png",
     },
     {
-        "area": "auto", "name": "Amazon Price Tracker", "tags": "BeautifulSoup,requests,SMTP", "featured": True,
-        "desc_en": "Watches a product price and sends an email when it drops below a threshold.",
-        "desc_uk": "Стежить за ціною товару й надсилає лист, коли вона падає нижче порогу.",
-        "desc_de": "Beobachtet den Preis eines Produkts und schickt eine E-Mail, wenn er unter eine Schwelle fällt.",
-    },
-    {
-        "area": "auto", "name": "Data Entry Automation", "tags": "BeautifulSoup,Selenium",
-        "desc_en": "Scrapes rental listings and fills in a Google Form with them automatically.",
-        "desc_uk": "Збирає оголошення про оренду й сама заповнює ними Google-форму.",
-        "desc_de": "Sammelt Mietanzeigen und trägt sie automatisch in ein Google-Formular ein.",
-    },
-    {
         "area": "auto", "name": "T-Rex Bot", "tags": "mss,Pillow,PyAutoGUI",
         "desc_en": "A bot that plays Chrome's dinosaur game by looking at the screen: it measures the speed of the game, times each jump and follows the game when the page zooms it.",
         "desc_uk": "Бот, який грає в динозаврика з Chrome, дивлячись на екран: вимірює швидкість гри, розраховує кожен стрибок і стежить за грою, коли сторінка її збільшує.",
@@ -67,46 +51,11 @@ PROJECTS = [
         "image": "tic-tac-toe.png",
     },
     {
-        "area": "api", "name": "Flight Deal Finder", "tags": "REST API,Google Sheets,SMTP", "featured": True,
-        "desc_en": "Searches for cheap flights across a list of destinations and alerts you to deals.",
-        "desc_uk": "Шукає дешеві авіаквитки за списком напрямків і сповіщає про знахідки.",
-        "desc_de": "Sucht günstige Flüge für eine Liste von Reisezielen und meldet Schnäppchen.",
-    },
-    {
-        "area": "api", "name": "ISS Tracker", "tags": "requests,API,SMTP",
-        "desc_en": "Sends an email when the ISS passes overhead at night.",
-        "desc_uk": "Надсилає лист, коли МКС уночі пролітає над містом.",
-        "desc_de": "Schickt eine E-Mail, wenn die ISS nachts über der Stadt fliegt.",
-    },
-    {
-        "area": "api", "name": "Habit Tracker", "tags": "requests,REST API",
-        "desc_en": "Logs daily habits and turns them into a graph via an API.",
-        "desc_uk": "Записує щоденні звички й будує з них графік через API.",
-        "desc_de": "Erfasst tägliche Gewohnheiten und zeichnet sie über eine API als Diagramm.",
-    },
-    {
-        "area": "data", "name": "House Price Prediction", "tags": "pandas,scikit-learn,Seaborn",
-        "desc_en": "A linear regression model that estimates house prices.",
-        "desc_uk": "Модель лінійної регресії, що оцінює ціни на житло.",
-        "desc_de": "Ein lineares Regressionsmodell, das Immobilienpreise schätzt.",
-    },
-    {
-        "area": "data", "name": "Nobel Prize Analysis", "tags": "pandas,Plotly",
-        "desc_en": "An exploration of laureates by year, country and field.",
-        "desc_uk": "Дослідження лауреатів за роками, країнами й галузями.",
-        "desc_de": "Eine Analyse der Preisträger nach Jahr, Land und Fachgebiet.",
-    },
-    {
-        "area": "data", "name": "LEGO Analysis", "tags": "pandas,matplotlib",
-        "desc_en": "How LEGO sets changed over time: themes, part counts, years.",
-        "desc_uk": "Як змінювалися набори LEGO: теми, кількість деталей, роки.",
-        "desc_de": "Wie sich LEGO-Sets verändert haben: Themen, Teilezahlen, Jahre.",
-    },
-    {
-        "area": "data", "name": "Google Trends", "tags": "pandas,matplotlib",
-        "desc_en": "Do search trends relate to real-world data? Correlations and charts.",
-        "desc_uk": "Чи пов’язані пошукові тренди з реальними даними — кореляції й графіки.",
-        "desc_de": "Hängen Suchtrends mit realen Daten zusammen? Korrelationen und Diagramme.",
+        "area": "auto", "name": "Bike Finder", "tags": "Selenium,SQLite,Flask,launchd", "featured": True, "private": True,
+        "desc_en": "Checks several online bike shops every day with Selenium, compares each bike with my criteria and explains the verdict. It remembers what it has seen, spots price drops and shows only new matches in a small Flask app.",
+        "desc_uk": "Щодня перевіряє каталоги кількох онлайн-магазинів через Selenium, порівнює кожен велосипед із моїми критеріями й пояснює вердикт. Пам’ятає вже бачене, помічає зниження цін і показує лише нові збіги в невеликому Flask-застосунку.",
+        "desc_de": "Prüft täglich mit Selenium mehrere Online-Fahrradshops, vergleicht jedes Rad mit meinen Kriterien und begründet das Ergebnis. Merkt sich Gesehenes, erkennt Preissenkungen und zeigt nur neue Treffer in einer kleinen Flask-App.",
+        "image": "bike-finder.png",
     },
     {
         "area": "data", "name": "Steam Top Sellers Scraper", "tags": "BeautifulSoup,requests,CSV",
@@ -123,18 +72,6 @@ PROJECTS = [
         "desc_de": "Eine Analyse von über 2.500 Tötungen durch die Polizei in den USA (2015–2017), kombiniert mit Zensusdaten zu Armut, Bildung und Herkunft. Sie vergleicht den Anteil jeder Gruppe an den Getöteten mit ihrem Bevölkerungsanteil und betrachtet Alter, Waffen und den zeitlichen Verlauf.",
         "code_url": "https://github.com/goyalion17/fatal-force",
         "image": "fatal-force.png",
-    },
-    {
-        "area": "gui", "name": "Password Manager", "tags": "Tkinter,JSON",
-        "desc_en": "Generates and stores passwords, and looks up saved entries.",
-        "desc_uk": "Генерує й зберігає паролі, шукає збережені записи.",
-        "desc_de": "Erzeugt und speichert Passwörter und sucht gespeicherte Einträge.",
-    },
-    {
-        "area": "gui", "name": "Flash Card App", "tags": "Tkinter,pandas",
-        "desc_en": "Flash cards for learning words that remember your progress.",
-        "desc_uk": "Картки для вивчення слів, що запам’ятовують прогрес.",
-        "desc_de": "Lernkarten für Vokabeln, die den Fortschritt speichern.",
     },
     {
         "area": "gui", "name": "Watermark Studio", "tags": "Tkinter,Pillow",
@@ -169,7 +106,7 @@ PROJECTS = [
         "image": "dangerous-writing-app.png",
     },
     {
-        "area": "gui", "name": "PDF to Audiobook", "tags": "CustomTkinter,edge-tts,OCR,asyncio",
+        "area": "gui", "name": "PDF to Audiobook", "tags": "CustomTkinter,edge-tts,OCR,asyncio", "featured": True,
         "desc_en": "Turns any PDF, even a scanned book, into an MP3 audiobook with free natural-sounding voices. Listen in the app, save the MP3, and continue where you stopped.",
         "desc_uk": "Перетворює будь-який PDF, навіть сканований, на аудіокнигу MP3 з безкоштовними природними голосами. Слухай у застосунку, зберігай MP3 і продовжуй слухати з того самого місця.",
         "desc_de": "Macht aus jedem PDF, auch aus gescannten Büchern, ein MP3-Hörbuch mit kostenlosen, natürlich klingenden Stimmen. In der App anhören, als MP3 speichern und dort weiterhören, wo man aufgehört hat.",
@@ -193,7 +130,7 @@ PROJECTS = [
         "image": "art-explorer.png",
     },
     {
-        "area": "web", "name": "Polytsia Books", "tags": "Flask,SQLAlchemy,Flask-Login,Stripe,pytest",
+        "area": "web", "name": "Polytsia Books", "tags": "Flask,SQLAlchemy,Flask-Login,Stripe,pytest", "featured": True,
         "desc_en": "An online bookshop with a cart, accounts and real Stripe Checkout payments in test mode. Search and categories, stock checks, order history, a webhook that confirms orders safely and an English/Ukrainian interface.",
         "desc_uk": "Онлайн-книгарня з кошиком, акаунтами й оплатою через Stripe Checkout у тестовому режимі. Пошук і категорії, перевірка залишків, історія замовлень, webhook для надійного підтвердження оплати та інтерфейс англійською й українською.",
         "desc_de": "Ein Online-Buchladen mit Warenkorb, Konten und Zahlungen über Stripe Checkout im Testmodus. Suche und Kategorien, Lagerprüfung, Bestellhistorie, ein Webhook zur sicheren Bestätigung und eine englisch-ukrainische Oberfläche.",

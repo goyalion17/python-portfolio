@@ -8,16 +8,16 @@
     <p class="lead">{{ t.hero.text }}</p>
     <div class="hero-actions">
       <a class="gbtn big" href="#projects">{{ t.hero.cta_projects }} →</a>
-      <a class="glass big ghost" href="#">GitHub</a>
+      <a class="glass big ghost" href="https://github.com/goyalion17" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 
   <div class="code-card">
-    <div class="code-head"><span>flight_deals.py</span><span><i class="dot"></i>scheduled · 08:00</span></div>
-<pre><span class="kw">for</span> city <span class="kw">in</span> sheet.destinations():
-    deal = search.cheapest(<span class="arg">origin</span>, city)
-    <span class="kw">if</span> deal.price &lt; city.max_price:
-        notify(<span class="str">f"{city.name}: {deal.price} €"</span>)</pre>
+    <div class="code-head"><span>bike_finder.py</span><span><i class="dot"></i>launchd · 09:00</span></div>
+<pre><span class="kw">for</span> bike <span class="kw">in</span> shop.new_bikes():
+    verdict = match(bike, <span class="arg">CRITERIA</span>)
+    <span class="kw">if</span> verdict.fits <span class="kw">and</span> bike.is_new:
+        notify(<span class="str">f"{bike.title}: {bike.price} €"</span>)</pre>
   </div>
 </div>
 {% endblock %}
@@ -34,7 +34,7 @@
       {% for p in featured %}
       <article class="glass lift card-big">
         {% if p.image %}<img class="shot-img" src="{{ url_for('static', filename='img/' ~ p.image) }}" alt="{{ p.name }}">
-        {% else %}<div class="shot {{ p.area }}">{{ t.projects.screenshot }}</div>{% endif %}
+        {% else %}<div class="shot {{ p.area }}">{{ p.name }}</div>{% endif %}
         <div class="card-body">
           <span class="meta">{{ t.areas[p.area] }} · {{ t.projects.featured }}</span>
           <h3>{{ p.name }}</h3>
@@ -45,6 +45,7 @@
           <div class="card-actions">
             {% if p.code_url %}<a class="btn-outline" href="{{ p.code_url }}" target="_blank" rel="noopener">{{ t.projects.code }}</a>{% endif %}
             {% if p.demo_url %}<a class="gbtn center" href="{{ p.demo_url }}" target="_blank" rel="noopener">{{ t.projects.demo }}</a>{% endif %}
+            {% if p.private %}<span class="btn-outline private-note">{{ t.projects.private }}</span>{% endif %}
           </div>
         </div>
       </article>
@@ -69,7 +70,7 @@
         {% for p in projects %}
         <article class="lift card-small">
           {% if p.image %}<img class="shot-img small" src="{{ url_for('static', filename='img/' ~ p.image) }}" alt="{{ p.name }}">
-          {% else %}<div class="shot small {{ p.area }}">{{ t.projects.screenshot }}</div>{% endif %}
+          {% else %}<div class="shot small {{ p.area }}">{{ p.name }}</div>{% endif %}
           <span class="meta">{{ t.areas[p.area] }}</span>
           <h4>{{ p.name }}</h4>
           <p>{{ p.description(lang) }}</p>
@@ -79,6 +80,7 @@
           <div class="links">
             {% if p.code_url %}<a href="{{ p.code_url }}" target="_blank" rel="noopener">{{ t.projects.code }} ↗</a>{% endif %}
             {% if p.demo_url %}<a href="{{ p.demo_url }}" target="_blank" rel="noopener">{{ t.projects.demo }} ↗</a>{% endif %}
+            {% if p.private %}<span class="private-note">🔒 {{ t.projects.private }}</span>{% endif %}
           </div>
         </article>
         {% endfor %}
@@ -131,7 +133,7 @@
 
 <section id="about" class="section">
   <div class="glass about-card">
-    <div class="avatar">{{ t.about.photo }}</div>
+    <div class="avatar" aria-hidden="true">{{ t.about.initials }}</div>
     <div class="about-text">
       <span class="eyebrow gtext">{{ t.about.eyebrow }}</span>
       <p>{{ t.about.text }}</p>
@@ -145,9 +147,8 @@
     <h2>{{ t.contact.title }}</h2>
     <p>{{ t.contact.text }}</p>
     <div class="cta-links">
-      <a class="cta-main" href="#">{{ t.contact.email }}</a>
-      <a class="cta-side" href="#">LinkedIn</a>
-      <a class="cta-side" href="#">GitHub</a>
+      <a class="cta-main" href="mailto:{{ t.contact.email }}">{{ t.contact.email }}</a>
+      <a class="cta-side" href="https://github.com/goyalion17" target="_blank" rel="noopener">GitHub</a>
     </div>
 
     <form class="contact-form" method="post" action="{{ url_for('home', lang=lang, _anchor='contact') }}" novalidate>

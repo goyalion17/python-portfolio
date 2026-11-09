@@ -23,7 +23,7 @@
     "filter_label": "Filter by area",
     "code": "Code",
     "demo": "Demo",
-    "screenshot": "[screenshot]"
+    "private": "Private code, available on request"
   },
   "areas": {
     "all": "All",
@@ -42,9 +42,10 @@
         "items": [
           "OOP",
           "error handling",
-          "list comprehension",
-          "JSON",
-          "file handling"
+          "asyncio",
+          "threading",
+          "file handling",
+          "JSON"
         ]
       },
       {
@@ -52,31 +53,31 @@
         "items": [
           "Flask",
           "Jinja",
-          "Flask-WTF",
-          "SQLite",
           "SQLAlchemy",
-          "REST API",
-          "authentication",
-          "deployment"
+          "SQLite",
+          "Flask-Login",
+          "Flask-WTF",
+          "Stripe"
         ]
       },
       {
         "title": "APIs & integrations",
         "items": [
+          "REST APIs",
           "HTTP requests",
-          "API keys",
+          "webhooks",
           "environment variables",
-          "Google Sheets",
           "SMTP"
         ]
       },
       {
         "title": "Automation",
         "items": [
-          "BeautifulSoup",
           "Selenium",
-          "bots",
-          "trackers"
+          "BeautifulSoup",
+          "PyAutoGUI",
+          "screen analysis",
+          "scheduled jobs"
         ]
       },
       {
@@ -84,20 +85,20 @@
         "items": [
           "pandas",
           "NumPy",
-          "matplotlib",
           "Plotly",
           "Seaborn",
-          "linear regression",
-          "t-tests"
+          "matplotlib",
+          "Jupyter"
         ]
       },
       {
-        "title": "Tools",
+        "title": "Desktop & tools",
         "items": [
-          "Git",
-          "GitHub",
           "Tkinter",
-          "debugging"
+          "CustomTkinter",
+          "pytest",
+          "Git",
+          "GitHub"
         ]
       }
     ]
@@ -124,18 +125,18 @@
       }
     ],
     "quote_label": "From a post-project reflection",
-    "quote": "[Placeholder: an excerpt from your reflection — what worked, what was hard, what you would do differently.]",
-    "quote_source": "[Project name]"
+    "quote": "The documentation says one thing, the API does another. The museum API's search only ranked results instead of filtering them, and stopped at a thousand records. Now I check the API's answers by hand first and only then write the code.",
+    "quote_source": "Art Explorer"
   },
   "about": {
     "eyebrow": "About me",
-    "photo": "[photo]",
-    "text": "[Placeholder: 3–4 sentences — who you are, what interests you in development, what you're working on.]"
+    "text": "I'm Iryna, a Python developer. I like problems where code takes over the routine: a script that checks shops every day, a bot that plays a game on its own, an app that reads a PDF aloud. I build backends with Flask, work with data in pandas and make desktop apps. Right now I'm building complete web apps with payments, tests and multilingual interfaces.",
+    "initials": "IS"
   },
   "contact": {
     "title": "Get in touch.",
     "text": "About code, ideas or projects — I'm happy to reply.",
-    "email": "[your@email.com]"
+    "email": "pylearn287@gmail.com"
   },
   "footer": {
     "copyright": "© 2026 Iryna Savelieva",

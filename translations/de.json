@@ -23,7 +23,7 @@
     "filter_label": "Nach Bereich filtern",
     "code": "Code",
     "demo": "Demo",
-    "screenshot": "[Screenshot]"
+    "private": "Code privat, auf Anfrage"
   },
   "areas": {
     "all": "Alle",
@@ -42,9 +42,10 @@
         "items": [
           "OOP",
           "Fehlerbehandlung",
-          "List Comprehension",
-          "JSON",
-          "Dateiverarbeitung"
+          "asyncio",
+          "Threading",
+          "Dateiverarbeitung",
+          "JSON"
         ]
       },
       {
@@ -52,31 +53,31 @@
         "items": [
           "Flask",
           "Jinja",
-          "Flask-WTF",
-          "SQLite",
           "SQLAlchemy",
-          "REST API",
-          "Authentifizierung",
-          "Deployment"
+          "SQLite",
+          "Flask-Login",
+          "Flask-WTF",
+          "Stripe"
         ]
       },
       {
         "title": "APIs & Integrationen",
         "items": [
-          "HTTP-Requests",
-          "API-Schlüssel",
+          "REST-APIs",
+          "HTTP-Anfragen",
+          "Webhooks",
           "Umgebungsvariablen",
-          "Google Sheets",
           "SMTP"
         ]
       },
       {
         "title": "Automatisierung",
         "items": [
-          "BeautifulSoup",
           "Selenium",
-          "Bots",
-          "Tracker"
+          "BeautifulSoup",
+          "PyAutoGUI",
+          "Bildschirmanalyse",
+          "geplante Jobs"
         ]
       },
       {
@@ -84,20 +85,20 @@
         "items": [
           "pandas",
           "NumPy",
-          "matplotlib",
           "Plotly",
           "Seaborn",
-          "lineare Regression",
-          "t-Tests"
+          "matplotlib",
+          "Jupyter"
         ]
       },
       {
-        "title": "Werkzeuge",
+        "title": "Desktop & Tools",
         "items": [
-          "Git",
-          "GitHub",
           "Tkinter",
-          "Debugging"
+          "CustomTkinter",
+          "pytest",
+          "Git",
+          "GitHub"
         ]
       }
     ]
@@ -124,18 +125,18 @@
       }
     ],
     "quote_label": "Aus einer Projekt-Reflexion",
-    "quote": "[Platzhalter: ein Auszug aus deiner Reflexion — was gelang, was schwierig war, was du anders machen würdest.]",
-    "quote_source": "[Projektname]"
+    "quote": "Die Dokumentation sagt das eine, die API tut etwas anderes. Die Suche der Museums-API hat Ergebnisse nur sortiert statt gefiltert und war nach tausend Einträgen zu Ende. Heute prüfe ich die Antworten einer API zuerst von Hand und schreibe erst dann den Code.",
+    "quote_source": "Art Explorer"
   },
   "about": {
     "eyebrow": "Über mich",
-    "photo": "[Foto]",
-    "text": "[Platzhalter: 3–4 Sätze — wer du bist, was dich an der Entwicklung interessiert, woran du arbeitest.]"
+    "text": "Ich bin Iryna, Python-Entwicklerin. Am liebsten löse ich Aufgaben, bei denen Code die Routine übernimmt: ein Skript, das jeden Tag Shops prüft, ein Bot, der selbst ein Spiel spielt, eine App, die PDFs vorliest. Ich baue Backends mit Flask, arbeite mit Daten in pandas und entwickle Desktop-Apps. Gerade baue ich vollständige Web-Apps mit Zahlungen, Tests und mehrsprachigen Oberflächen.",
+    "initials": "IS"
   },
   "contact": {
     "title": "Schreib mir.",
     "text": "Über Code, Ideen oder Projekte — ich antworte gern.",
-    "email": "[your@email.com]"
+    "email": "pylearn287@gmail.com"
   },
   "footer": {
     "copyright": "© 2026 Iryna Savelieva",
